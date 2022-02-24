@@ -1,6 +1,8 @@
 import styles from "rollup-plugin-styles";
 import copy from "rollup-plugin-copy";
 import { babel } from "@rollup/plugin-babel";
+import serve from "rollup-plugin-serve";
+import livereload from "rollup-plugin-livereload";
 
 const targetDir = "dist";
 const srcDir = "src";
@@ -28,5 +30,9 @@ export default {
     }),
 
     babel({ babelHelpers: "bundled" }),
+
+    serve({ port: 3000, contentBase: "dist" }),
+
+    livereload({ delay: 500, watch: "dist" }),
   ],
 };

@@ -1,7 +1,13 @@
 .js-image {
-  width: 200px;
+  width: 265px;
 }
 
-.test {
-  width: 0;
+h1 {
+
+  color: white;
+  background: darkgrey;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 28px;
+  box-sizing: border-box;
 }

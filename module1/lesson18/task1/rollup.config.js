@@ -3,9 +3,13 @@ import copy from "rollup-plugin-copy";
 import { babel } from "@rollup/plugin-babel";
 import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
+import image from "rollup-plugin-img";
+import alias from "@rollup/plugin-alias";
+import path from "path";
 
 const targetDir = "dist";
 const srcDir = "src";
+const srcAssetsDir = path.resolve(__dirname, srcDir, "assets");
 
 export default {
   input: `${srcDir}/index.js`,
@@ -21,8 +25,18 @@ export default {
   },
 
   plugins: [
+    alias({
+      entries: [{ find: "@assets", replacement: srcAssetsDir }],
+    }),
+
     styles({
       mode: ["extract", "index.css"],
+    }),
+
+    image({
+      output: `${targetDir}`,
+      limit: 10000,
+      exclude: "node_modules/**",
     }),
 
     copy({
@@ -31,8 +45,8 @@ export default {
 
     babel({ babelHelpers: "bundled" }),
 
-    serve({ port: 3000, contentBase: "dist" }),
+    serve({ port: 3000, contentBase: targetDir }),
 
-    livereload({ delay: 500, watch: "dist" }),
+    livereload({ delay: 500, watch: targetDir }),
   ],
 };

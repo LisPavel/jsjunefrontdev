@@ -14,6 +14,12 @@ module.exports = {
     clean: true,
   },
 
+  devServer: {
+    static: targetDir,
+    port: 3000,
+    open: true,
+  },
+
   plugins: [
     new HtmlWebpackPlugin({ template: path.resolve(srcDir, "index.html") }),
   ],

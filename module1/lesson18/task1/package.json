@@ -1,0 +1,28 @@
+{
+  "name": "rollup-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "keywords": [
+    "rollup",
+    "tasks",
+    "jsjune"
+  ],
+  "author": "PavelL",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}

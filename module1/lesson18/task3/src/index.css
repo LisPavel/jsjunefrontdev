@@ -1,0 +1,8 @@
+body {
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+.js-image {
+  width: 250px;
+}

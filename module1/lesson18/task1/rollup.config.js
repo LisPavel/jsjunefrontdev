@@ -1,5 +1,6 @@
 import styles from "rollup-plugin-styles";
 import copy from "rollup-plugin-copy";
+import { babel } from "@rollup/plugin-babel";
 
 const targetDir = "dist";
 const srcDir = "src";
@@ -25,5 +26,7 @@ export default {
     copy({
       targets: [{ src: `${srcDir}/index.html`, dest: `${targetDir}` }],
     }),
+
+    babel({ babelHelpers: "bundled" }),
   ],
 };

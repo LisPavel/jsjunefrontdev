@@ -1,0 +1,12 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Studying webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["webpack","js-june"],
+  "author": "Pavel L",
+  "license": "ISC"
+}

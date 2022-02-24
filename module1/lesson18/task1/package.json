@@ -1,0 +1,20 @@
+{
+  "name": "rollup-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "keywords": [
+    "rollup",
+    "tasks",
+    "jsjune"
+  ],
+  "author": "PavelL",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.68.0"
+  }
+}

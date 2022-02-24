@@ -1,12 +1,19 @@
 {
-  "name": "webpack",
+  "name": "webpack-studying",
   "version": "1.0.0",
   "description": "Studying webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js"
   },
-  "keywords": ["webpack","js-june"],
+  "keywords": [
+    "webpack",
+    "js-june"
+  ],
   "author": "Pavel L",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
 }

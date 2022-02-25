@@ -1,10 +1,7 @@
 import "./index.css";
 
-const clg = (...content) => console.log(...content);
+import AppComponent from "./modules/app/app";
 
-clg("HelloWorld!");
+const app = new AppComponent();
 
-const { body } = document;
-const h1 = document.createElement("h1");
-h1.textContent = "Hey yay!";
-body.append(h1);
+app.run();

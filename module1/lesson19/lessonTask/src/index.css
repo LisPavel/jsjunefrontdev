@@ -1,7 +1,13 @@
-.test {
-  width: 250px;
+:root {
+  --text-color: white;
 }
 
 body {
-  background-color: aqua;
+  background-color: black;
+  color: var(--text-color);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }

@@ -1,0 +1,27 @@
+:root {
+  --js-image-size: 250px;
+}
+
+.js-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js-image {
+  width: var(--js-image-size);
+  height: var(--js-image-size);
+}
+
+.main-title {
+  color: var(--text-color);
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin-bottom: 10px;
+}
+
+.founded-text {
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 2.5rem;
+}

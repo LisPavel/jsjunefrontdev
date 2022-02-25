@@ -1,0 +1,19 @@
+.today-date {
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-style: italic;
+}
+
+#timer {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.timer-text {
+  line-height: 3rem;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}

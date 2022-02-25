@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const srcDir = path.resolve(__dirname, "src");
 const targetDir = path.resolve(__dirname, "dist");
 const srcAssetsDir = path.resolve(srcDir, "assets");
+const srcUtilsDir = path.resolve(srcDir, "core", "utils");
+const srcConstantsDir = path.resolve(srcDir, "core/constants");
 
 module.exports = {
   mode: "development",
@@ -31,6 +33,8 @@ module.exports = {
   resolve: {
     alias: {
       "@assets": srcAssetsDir,
+      "@utils": srcUtilsDir,
+      "@constants": srcConstantsDir,
     },
   },
 

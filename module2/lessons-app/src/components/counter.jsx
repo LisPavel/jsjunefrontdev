@@ -1,7 +1,12 @@
 import React from "react";
 
 const Counter = () => {
-  return <h1>Counter</h1>;
+  return (
+    <React.Fragment>
+      <h1>Counter</h1>
+      <button className="button">+</button>
+    </React.Fragment>
+  );
 };
 
 export default Counter;

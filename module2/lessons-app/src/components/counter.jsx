@@ -15,8 +15,11 @@ const Counter = () => {
   };
 
   const handleIncrement = (ev) => {
-    setCount(count + 1);
-    console.log(count);
+    setCount((prevState) => prevState + 1);
+  };
+
+  const handleDecrement = (ev) => {
+    setCount((prevState) => (prevState > 0 ? prevState - 1 : prevState));
   };
 
   return (
@@ -24,6 +27,9 @@ const Counter = () => {
       <span className={getBadgeClasses()}>{formatCount()}</span>
       <button className="btn btn-primary btn-sm m-2" onClick={handleIncrement}>
         +
+      </button>
+      <button className="btn btn-primary btn-sm m-2" onClick={handleDecrement}>
+        -
       </button>
     </>
   );

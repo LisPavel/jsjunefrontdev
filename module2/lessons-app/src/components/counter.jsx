@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Counter = () => {
-  let count = 2;
+  // let count = 2;
+  const [count, setCount] = useState(0);
+
   const formatCount = () => {
     return count === 0 ? "Empty" : count;
   };
@@ -13,7 +15,7 @@ const Counter = () => {
   };
 
   const handleIncrement = (ev) => {
-    count += 1;
+    setCount(count + 1);
     console.log(count);
   };
 

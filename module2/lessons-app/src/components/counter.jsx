@@ -5,9 +5,16 @@ const Counter = () => {
   const formatCount = () => {
     return count === 0 ? "Empty" : count;
   };
+
+  const getBadgeClasses = () => {
+    let classes = "badge m-2 ";
+    classes += count === 0 ? "bg-warning" : "bg-primary";
+    return classes;
+  };
+
   return (
     <>
-      <span className="badge bg-primary m-2">{formatCount()}</span>
+      <span className={getBadgeClasses()}>{formatCount()}</span>
       <button className="btn btn-primary btn-sm m-2">+</button>
     </>
   );

@@ -28,19 +28,22 @@ const Counter = () => {
     console.log(id);
   };
 
+  const renderTags = () => {
+    if (tags.length === 0) return "No tags";
+    return tags.map((tag) => (
+      <li
+        key={tag}
+        className="btn btn-primary btn-sm m-2"
+        onClick={() => handleTagChange(tag)}
+      >
+        {tag}
+      </li>
+    ));
+  };
+
   return (
     <>
-      <ul>
-        {tags.map((tag) => (
-          <li
-            key={tag}
-            className="btn btn-primary btn-sm m-2"
-            onClick={() => handleTagChange(tag)}
-          >
-            {tag}
-          </li>
-        ))}
-      </ul>
+      <ul>{renderTags()}</ul>
       <span className={getBadgeClasses()}>{formatCount()}</span>
       <button className="btn btn-primary btn-sm m-2" onClick={handleIncrement}>
         +

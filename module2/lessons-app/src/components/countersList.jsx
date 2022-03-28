@@ -21,13 +21,7 @@ const CountersList = () => {
   return (
     <>
       {counters.map((count) => (
-        <Counter
-          key={count.id}
-          id={count.id}
-          value={count.value}
-          name={count.name}
-          onDelete={handleDeleteCounter}
-        />
+        <Counter key={count.id} {...count} onDelete={handleDeleteCounter} />
       ))}
     </>
   );

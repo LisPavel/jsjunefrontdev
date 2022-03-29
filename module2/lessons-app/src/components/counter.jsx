@@ -5,6 +5,7 @@ const Counter = (props) => {
   // let count = 2;
   // const [value, setValue] = useState(props.value);
   const { value } = props;
+  const { onIncrement, onDecrement } = props;
 
   const formatValue = () => {
     return value === 0 ? "Empty" : value;
@@ -16,15 +17,9 @@ const Counter = (props) => {
     return classes;
   };
 
-  const handleIncrement = (ev) => {
-    console.log("handle increment");
-    // setValue((prevState) => prevState + 1);
-  };
+  const handleIncrement = (ev) => onIncrement(props.id);
 
-  const handleDecrement = (ev) => {
-    console.log("handle decrement");
-    // setValue((prevState) => (prevState > 0 ? prevState - 1 : prevState));
-  };
+  const handleDecrement = (ev) => onDecrement(props.id); 
 
   return (
     <div>

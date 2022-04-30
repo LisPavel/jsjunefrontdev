@@ -1,10 +1,13 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Dashboard from "../components/dashboard";
 import Home from "../components/home";
 import LogIn from "../components/login";
 import NavBar from "../components/navBar";
+import NotFound from "../components/not-fount";
 import Posts from "../components/posts";
 import Stats from "../components/stats";
+// import PostsList from "../components/postsList";
+// import Post from "../components/post";
 
 function App() {
   return (
@@ -14,9 +17,11 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/dashboard/stats" component={Stats} />
-        <Route path="/dashboard" render={(props) => <Dashboard {...props} />} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/login" component={LogIn} />
-        <Route path="/posts" component={Posts} />
+        <Route path="/posts/:postId?" component={Posts} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
       </Switch>
     </div>
   );

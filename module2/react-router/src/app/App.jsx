@@ -16,7 +16,6 @@ function App() {
       <h1>react router</h1>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/dashboard/stats" component={Stats} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/login" component={LogIn} />
         <Route path="/posts/:postId?" component={Posts} />

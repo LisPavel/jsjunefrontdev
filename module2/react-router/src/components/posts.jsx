@@ -2,9 +2,8 @@ import React from "react";
 import PostsList from "./postsList";
 import Post from "./post";
 import query from "query-string";
-import _ from "lodash";
 
-const Posts = ({ match, location }) => {
+const Posts = ({ match, location, history }) => {
   const {
     params: { postId },
   } = match;
@@ -18,14 +17,10 @@ const Posts = ({ match, location }) => {
     { id: 15, content: "post5", label: "p5" },
   ];
 
-  const postsCrop = search?.count
-    ? _(posts).slice(0).take(search.count).value()
-    : posts;
-
   return !postId ? (
-    <PostsList {...{ posts: postsCrop }} />
+    <PostsList {...{ posts }} />
   ) : (
-    <Post {...{ posts: postsCrop, id: postId }} />
+    <Post {...{ posts, id: postId, history }} />
   );
 };
 

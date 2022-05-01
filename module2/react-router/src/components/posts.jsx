@@ -2,11 +2,13 @@ import React from "react";
 import PostsList from "./postsList";
 import Post from "./post";
 import query from "query-string";
+import { useLocation, useParams, useRouteMatch } from "react-router-dom";
 
-const Posts = ({ match, location, history }) => {
-  const {
-    params: { postId },
-  } = match;
+const Posts = () => {
+  // const match = useRouteMatch();
+  const location = useLocation();
+  const params = useParams();
+  const { postId } = params;
   const search = query.parse(location.search);
   console.log(search);
   const posts = [
@@ -20,7 +22,7 @@ const Posts = ({ match, location, history }) => {
   return !postId ? (
     <PostsList {...{ posts }} />
   ) : (
-    <Post {...{ posts, id: postId, history }} />
+    <Post {...{ posts, id: postId }} />
   );
 };
 
